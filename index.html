@@ -94,7 +94,18 @@
                 </button>
             </div>
         </div>
-        
+         <!--Lista de platillos-->
+         <div class="admin-section-title">
+            Platillos registrados
+             <span id="admin-count" style="font-size: 0.8rem; color:var(--muted);font-weight: 400; font-family: var(--font-body);"></span>
+             <button class="btn btn-secondary" style="margin-left:auto; font-size:0.78rem; padding: 5px 14px;" onclick="cargarEjemplos()">
+                Cargar platillos de Ejemplos
+             </button>
+         </div>
+         <div id="admin-list">
+            <div class="loading">Cargando..</div>
+         </div>
         </main>
+        <!--Toast-->
 </body>
 </html>
