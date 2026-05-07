@@ -55,6 +55,46 @@
                 <div class="stat-lbl">Precio promedio</div>
             </div>
         </div>
-    </main>
+         <!--Formulario-->
+        <div class="form-card">
+            <h2 id="form-title">Agregar nuevo platillo</h2>
+            <input type="hidden" id="edit-id">
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nombre del platillo *</label>
+                    <input type="text" id="f-name" placeholder="Ej:Pollo al ajillo">
+                </div>
+                <div class="form-group">
+                    <label>Precio(₡)* </label>
+                    <input type="number" id="f-price" placeholder="Ej: 4500" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Categoria *</label>
+                    <select id="f-cat"></select>
+                </div>
+                <div class="form-group">
+                    <label>Emoji / icono</label>
+                    <input type="text" id="f-icon" placeholder="🍽️" maxlength="4">
+                </div>
+            </div>
+            <div class="form-grid full" style="margin-top:14;">
+                <div class="form-group">
+                    <label">Descripcion</label>
+                    <textarea id="f-desc" placeholder="Ingredientes o descripcion del platilo...."></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary" onclick="saveDish()">
+                    <span id="btn-save-text">Agregar platillo</span>
+                </button>
+                <button class="btn btn-primary" onclick="clearForm()">Limpiar</button>
+                <button class="btn btn-secondary" id="btn-cancel-edit" onclick="cancelEdit()" style="display:none; color: #c0392b; border-color: #e0b0ad;">
+                    Cancelar edicion
+                </button>
+            </div>
+        </div>
+        
+        </main>
 </body>
 </html>
