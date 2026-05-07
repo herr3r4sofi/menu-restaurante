@@ -9,9 +9,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
-    
+    <!--Header-->
+    <header>
+        <div class="header brand">
+            <h1>La mesa del Chef</h1>
+            <p>Sistema de menu * Firebase Realtime DB</p>
+        </div>
+        <div style="display:flex; align-items: center; gap: 12px; flex:wrap;">
+            <span class="db-status" id="db-status">
+            </span class="db-dot" id="db-dot"></span>
+            <span id="db-label">Sin conexion</span>
+            </span>
+            <div class="header-tabs">
+                <button class="tab-btn active" onclick="switchTab('menu')">Menu</button>
+                <button class="tab-btn" onclick="switchTab('admin')">Mantenimiento</button>
+            </div>
+            </div>
+    </header>
 </body>
 </html>
