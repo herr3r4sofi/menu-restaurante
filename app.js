@@ -16,3 +16,17 @@ function initFirebase(){
         setDbStatus('error');
     }
 }
+
+
+function startListening(){
+    if (!db) return;
+    const ref = db.ref('platillos');
+
+    ref.on('value', snap=> {
+        const data = snap.val() || {};
+        const list = Object.entries(data).map(([id, val])) => ({id, ...val});
+        renderAll(list);
+    }, err => {
+        showToast('Eror al lee datos: ' + err.message, 'error');
+    });
+}
